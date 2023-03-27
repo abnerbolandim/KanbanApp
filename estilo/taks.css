@@ -1,0 +1,31 @@
+/* Estilos para as tarefas */
+.task {
+	border-radius: 5px;
+	padding: 10px;
+	margin-bottom: 10px;
+	font-weight: 600;
+	font-size: 18px;
+	color: #fff;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+	position: relative;
+	word-wrap: break-word;
+}
+
+/* Estilos para os botões */
+.task button {
+	border: none;
+	background-color: transparent;
+	font-size: 1.2rem;
+	cursor: pointer;
+	color: #fff;
+	padding: 0;
+	float: right; /* alinha o botão à direita */
+}
+
+button.delete-btn {
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	font-size: 1rem;
+	cursor: pointer;
+}
