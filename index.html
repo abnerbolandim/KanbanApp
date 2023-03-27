@@ -31,5 +31,72 @@
 
 		<title>Kanban</title>
 	</head>
-	<body></body>
+	<body>
+		<div>
+			<div class="text-center form-group">
+				<label for="nomeTarefa" class="nometarefa">Nome da tarefa:</label>
+				<input
+					type="text"
+					id="nomeTarefa"
+					class="form-control input-pequeno"
+					maxlength="20"
+				/>
+				<button id="btnAdicionar" class="btn mt-2">Adicionar</button>
+			</div>
+			<div class="dentro_informacao">
+				<div class="container">
+					<div class="row">
+						<div class="tabela1 col column" id="Fazer">
+							<h2 class="text-white">
+								1 | Fazer
+								<span style="float: right"><i class="fas fa-plus"></i></span>
+							</h2>
+							<div
+								class="task-list p-2"
+								ondrop="drop_handler(event)"
+								ondragover="dragover_handler(event)"
+							></div>
+						</div>
+						<div class="tabela2 col column" id="Fazendo">
+							<h2 class="text-white">
+								2 | Fazendo
+								<span style="float: right"
+									><i class="fas fa-arrow-right"></i
+								></span>
+							</h2>
+							<div
+								class="task-list p-2"
+								ondrop="drop_handler(event)"
+								ondragover="dragover_handler(event)"
+							></div>
+						</div>
+						<div class="tabela3 col column" id="Feito">
+							<h2 class="text-white">
+								3 | Feito
+								<span style="float: right"
+									><i class="fas fa-arrow-right"></i
+								></span>
+							</h2>
+							<div
+								class="task-list p-2"
+								ondrop="drop_handler(event)"
+								ondragover="dragover_handler(event)"
+							></div>
+						</div>
+						<div class="tabela4 col column" id="Aprovado">
+							<h2 class="text-white">
+								4 | Aprovado
+								<span style="float: right"><i class="fas fa-check"></i></span>
+							</h2>
+							<div
+								class="task-list p-2"
+								ondrop="drop_handler(event)"
+								ondragover="dragover_handler(event)"
+							></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
