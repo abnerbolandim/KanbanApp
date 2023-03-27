@@ -1,0 +1,23 @@
+.input-pequeno {
+	width: 300px;
+	border-radius: 15px;
+}
+
+.form-control {
+	display: block;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.nometarefa {
+	color: white;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.form-group {
+	margin-bottom: 30px;
+	background-color: #857fd4;
+	border-bottom-left-radius: 40px;
+	border-bottom-right-radius: 40px;
+}
