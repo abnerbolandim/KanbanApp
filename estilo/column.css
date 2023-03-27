@@ -1,0 +1,55 @@
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+.column {
+	padding-top: 15px;
+	margin-right: 5px;
+	border-radius: 20px;
+	flex: 1;
+	margin-bottom: 20px;
+}
+.column:last-child {
+	margin-right: 0;
+}
+#btnAdicionar {
+	margin-top: 8px;
+	background-color: #6560ab;
+	color: white;
+	font-weight: 500;
+	margin-bottom: 13px;
+	border-radius: 10px;
+}
+
+#btnAdicionar:hover {
+	background-color: #514d8a;
+	transition: 0.2s;
+	transform: scale(1.05);
+}
+
+@media (min-width: 1200px) {
+	.dentro_informacao {
+		flex-wrap: nowrap;
+		flex-grow: 1;
+	}
+
+	.container {
+		flex-wrap: nowrap;
+	}
+
+	.column {
+		flex-basis: 0;
+		flex-grow: 1;
+		margin-right: 10px;
+	}
+
+	.column:last-child {
+		margin-right: 0;
+	}
+}
+
+@media (max-width: 1250.98px) {
+	.column {
+		flex-basis: 100%;
+	}
+}
