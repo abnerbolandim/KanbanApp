@@ -80,3 +80,42 @@ function drop_handler(ev) {
 		}
 	}
 }
+
+// Salvar as tarefas no Local Storage
+function saveTasks() {
+	const columns = document.querySelectorAll(".column");
+	const tasks = [];
+	columns.forEach((column) => {
+		const taskList = column.querySelector(".task-list");
+		const tasksInColumn = taskList.querySelectorAll(".task");
+		tasksInColumn.forEach((task) => {
+			const taskData = {
+				name: task.textContent,
+				column: column.id,
+			};
+			tasks.push(taskData);
+		});
+	});
+	localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+// Carregar as tarefas salvas no Local Storage
+function loadTasks() {
+	const savedTasks = JSON.parse(localStorage.getItem("tasks"));
+	if (savedTasks) {
+		savedTasks.forEach((savedTask) => {
+			const task = createTask(savedTask.name);
+			addTaskToColumn(task, savedTask.column);
+		});
+	}
+}
+
+// Chamar a função loadTasks quando a página for carregada
+window.addEventListener("load", loadTasks);
+
+// Adicionar um event listener para chamar a função saveTasks sempre que uma tarefa for adicionada ou removida
+const taskLists = document.querySelectorAll(".task-list");
+taskLists.forEach((taskList) => {
+	taskList.addEventListener("DOMNodeInserted", saveTasks);
+	taskList.addEventListener("DOMNodeRemoved", saveTasks);
+});
